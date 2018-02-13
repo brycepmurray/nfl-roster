@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <title>NFL Roster</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <form onsubmit="app.controllers.marvelCtrl.search(event)">
+                <input type="text" placeholder="Name Search" name="name">
+                <input type="text" placeholder="Position Search" name="position">
+                <input type="text" placeholder="Team Search" name="team">
+                <button type="submit">Search Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="app/player-service.js"></script>
+    <script src="app/player-controller.js"></script>
+    <script src="app/app.js"></script>
+</body>
+
+</html>
