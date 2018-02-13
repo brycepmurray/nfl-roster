@@ -42,7 +42,7 @@ function PlayerService(callback) {
         }
     }
 
-    this.removePlayer = function removePlayer(id) {
+    this.removePlayerById = function removePlayerById(id) {
         for (var i = 0; i < myPlayers.length; i++) {
             const player = myPlayers[i];
             if (player.id == id) {
