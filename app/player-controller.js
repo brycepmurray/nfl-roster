@@ -63,7 +63,7 @@ function PlayerController() {
 
             template += `
             <div class="col-sm-5 text-center">
-            <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/250x250/"></img>
+            <img src=${player.photo}></img>
             <h3>Name: ${player.fullname}</h3>
             <h5>Team: ${player.pro_team}</h5>
             <h5>Position: ${player.position}</h5>
@@ -82,7 +82,7 @@ function PlayerController() {
 
             template += `
             <div class="col-sm-5 text-center">
-            <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"></img>
+            <img src=${player.photo}></img>
             <h3>Name: ${player.fullname}</h3>
             <h5>Team: ${player.pro_team}</h5>
             <h5>Position: ${player.position}</h5>
