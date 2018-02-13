@@ -16,23 +16,41 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-            <form onsubmit="app.controllers.marvelCtrl.search(event)">
-                <input type="text" placeholder="Name Search" name="name">
-                <input type="text" placeholder="Position Search" name="position">
-                <input type="text" placeholder="Team Search" name="team">
-                <button type="submit">Search Now</button>
+            <form onsubmit="app.controllers.playerCtrl.getPlayerByTeam(event)">
+                <div class="form-group">
+                    <label for="teams">Teams</label>
+                    <input placeholder="Search For Teams" type="string" name="team" class="form-control">
+                </div>
+            </form>
+            <form onsubmit="app.controllers.playerCtrl.getPlayersByPosition(event)">
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <input placeholder="Search Abriviated Position" type="string" name="position" class="form-control">
+                </div>
+            </form>
+            <form onsubmit="app.controllers.playerCtrl.getPlayersByName(event)">
+                <div class="form-group">
+                    <label for="players">Players</label>
+                    <input placeholder="Search For Players Name" type="string" name="name" class="form-control">
+                    <button type="submit">Search</button>
+                </div>
             </form>
         </div>
-    </div>
-
-    <div class="container">
         <div class="row">
-
+            <div class="panel">
+                <div class="panel-title text-center">
+                    <h1>MY ROSTER</h1>
+                </div>
+                <div class="panel-body" id="my-team"></div>
+                <div class="panel-heading">
+                    <div class="panel-title text-center">
+                        <h1>NFL Roster</h1>
+                    </div>
+                </div>
+                <div class="panel-body" id="player"></div>
+            </div>
         </div>
     </div>
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="app/player-service.js"></script>
     <script src="app/player-controller.js"></script>

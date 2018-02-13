@@ -35,7 +35,7 @@ var PlayerService = function PlayerService(callback) {
 
     this.addPlayer = function addPlayer(id) {
         for (var i = 0; i < playersData.length; i++) {
-            var player = playersData[i];
+            const player = playersData[i];
             if (player.id == id) {
                 myPlayers.push(player)
             }
@@ -43,10 +43,10 @@ var PlayerService = function PlayerService(callback) {
     }
 
     this.removePlayer = function removePlayer(id) {
-        for (var j = 0; j < myPlayers.length; j++) {
-            var player = myPlayers[j];
+        for (var i = 0; i < myPlayers.length; i++) {
+            const player = myPlayers[i];
             if (player.id == id) {
-                myPlayers.splice(j, 1)
+                myPlayers.splice(i, 1)
             }
         }
     }

@@ -43,11 +43,11 @@ function PlayerController() {
 
             template += `
             <div class="col-sm-5 text-center">
-            <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"></img>
+            <img src=${player.photo}></img>
             <h3>Name: ${player.fullname}</h3>
             <h5>Team: ${player.pro_team}</h5>
             <h5>Position: ${player.position}</h5>
-            <button class="btn btn-success" onclick="app.controllers.playersCtrl.removePlayer(${player.id})">Remove</button>
+            <button class="btn btn-success" onclick="app.controllers.playerCtrl.addPlayer(${player.id})">Add</button>
             </div>
             `
         }
@@ -55,7 +55,7 @@ function PlayerController() {
     }
 
     function drawMyPlayers() {
-        var myPlayersElem = document.getElementById('my-team')
+        var myPlayersElem = document.getElementById('myPlayers')
         var players = playerService.getMyPlayers()
         template = ''
         for (var i = 0; i < players.length; i++) {
@@ -63,11 +63,11 @@ function PlayerController() {
 
             template += `
             <div class="col-sm-5 text-center">
-            <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"></img>
+            <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/250x250/"></img>
             <h3>Name: ${player.fullname}</h3>
             <h5>Team: ${player.pro_team}</h5>
             <h5>Position: ${player.position}</h5>
-            <button class="btn btn-success" onclick="app.controllers.playersCtrl.removePlayer(${player.id})">Remove</button>
+            <button class="btn btn-success" onclick="app.controllers.playerCtrl.removePlayer(${player.id})">Remove</button>
             </div>
             `
         }
@@ -86,7 +86,7 @@ function PlayerController() {
             <h3>Name: ${player.fullname}</h3>
             <h5>Team: ${player.pro_team}</h5>
             <h5>Position: ${player.position}</h5>
-            <button class="btn btn-success" onclick="app.controllers.playersCtrl.removePlayer(${player.id})">Remove</button>
+            <button class="btn btn-success" onclick="app.controllers.playerCtrl.removePlayer(${player.id})">Remove</button>
             </div>
             `
         }
