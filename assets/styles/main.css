@@ -1,3 +1,13 @@
+header {
+  background: rgba(34, 35, 44, 0.6);
+  color: #6ab9ff;
+  height: 4rem;
+}
+
+.intro {
+  text-shadow: 2px 2px 3px #f0f8ff;
+}
+
 .players {
   display: flex;
 }
