@@ -50,6 +50,9 @@ function PlayerController() {
             <button class="btn btn-success" onclick="app.controllers.playerCtrl.addPlayer(${player.id})">Add</button>
             </div>
             `
+            if (i == 100) {
+                i = players.length
+            }
         }
         playersElem.innerHTML = template
     }

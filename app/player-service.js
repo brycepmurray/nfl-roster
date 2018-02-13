@@ -1,4 +1,4 @@
-var PlayerService = function PlayerService(callback) {
+function PlayerService(callback) {
     var playersData = [];
     var myPlayers = [];
 
@@ -74,5 +74,4 @@ var PlayerService = function PlayerService(callback) {
         });
     }
     loadPlayersData();
-    console.log(playersData)
 }
